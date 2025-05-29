@@ -60,6 +60,7 @@ Go is a compiled language.
    * `var i int = 100`
    * `var b bool = true`
    * `var f float64 = 77.90`
+   * `var s, t string = "Lia", "Harry"`
 * Shorthand way
    * var (
 
@@ -68,4 +69,17 @@ Go is a compiled language.
      i int = 5) 
 
 * Other shorthand way
-   * `s := "Hello World"` `//strictly to use this style inside func only.` 
+   * `s := "Hello World"` `//strictly to use this style inside func only.`
+ 
+* local v/s global variable
+  * local: declared inside a function or a block, can't access outside the function or block.
+  * global: declared outside of a function or a block, available throughout the lifetime of a program.
+
+* Zero values: When you don't assign any value to the variable during declaration it chooses some default values.
+   * bool: false
+   * int: 0
+   * float64: 0.0
+   * string: ""
+   * pointer, func, interfaces, maps: nil
+
+**Read User Input**
