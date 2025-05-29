@@ -60,3 +60,12 @@ Go is a compiled language.
    * `var i int = 100`
    * `var b bool = true`
    * `var f float64 = 77.90`
+* Shorthand way
+   * var (
+
+     s string = "foo"
+
+     i int = 5) 
+
+* Other shorthand way
+   * `s := "Hello World"` `//strictly to use this style inside func only.` 
