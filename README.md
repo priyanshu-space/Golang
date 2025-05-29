@@ -55,7 +55,7 @@ Go is a compiled language.
 
 **Declaring variables in Golang**
 
-* var <var-name> <data-type> = <value>
+* `var <var-name> <data-type> = <value>`
    * `var s string = "Hello world"`
    * `var i int = 100`
    * `var b bool = true`
