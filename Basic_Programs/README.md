@@ -87,3 +87,5 @@ Go is a compiled language.
    * Returns:
      * count: the number of arguments that the function writes to.
      * err: any error thrown during the execution of the function.
+
+**variable type**
