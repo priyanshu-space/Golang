@@ -33,7 +33,6 @@ Go is a compiled language.
 * Dynamically
    * Data type: checked at runtime.
    * variable declaration: Not required can change dynamically.
-
 * Note :
    * Go is a statically typed language.
    * Inferred : The compiler guessed the type of a variable based on the value you assigned.
@@ -89,3 +88,95 @@ Go is a compiled language.
      * err: any error thrown during the execution of the function.
 
 **variable type**
+* By using format specifier: %T
+* From reflect package, fun: reflect.TypeOf()
+
+**Type casting in Golang**
+* String to int: 
+   * using `Atoi` inside `strconv` package.
+   * **Atoi**: converts `string to integer` and return two values- the corresponding integer, error(if any).
+* int to string: 
+   * using `Itoa` inside `strconv` package.
+   * **Itoa**: converts `integer to string` and return one value- string formed with the given integer. 
+* one type to another: `var f float64 = float(i) //i is some int variable`
+
+**Constant**
+   * Syntax: `const <variable-name> <data-type> = <value>`
+   * Types: `untyped` and `typed`
+   * untyped: `const age = 12`
+   * typed: `const name string = "Harrry"`
+   * Note: 
+      * constants once assigned its value can't be changed. 
+      * constant's value should be assigned and declare at the same time(not later).
+      * shorthand declaration for constant wouldn't work. `const name := "Harry" // throws error`
+
+**Operators** <Notes Pending>
+
+* **Bitwise Operators**
+   * bitwise AND (&): Converts the operand values in to bits and then perform the AND operation b/w the operands. 
+   * bitwise OR (|): Converts the operand values in to bits and then perform the OR operation b/w the operands.
+   * bitwise XOR (^): Output of XOR will be `1 if both bits are different` and `0 if both bits are same`. 
+   * left shift (<<): Shifts all bits towards left and the bit position vacated are filled with 0.
+   * right shift (>>): Shifts all bits towards right and the excess bits shifted off to the right are discarded.
+
+**if-else**
+
+* syntax:
+
+```
+if condition_1 {
+   //execute when condition 1 is true
+} else if condition_2 {
+   //execute when condition 1 is false but condition_2 is true
+} else if condition_3 {
+   //execute when condition 1 and 2 is false but condition_3 is true
+} else {
+   //execute when none of the condition is true.
+}
+```
+* Note : the `else` block will start where the `if` block ends(otherwise it will throw error).
+
+**switch-case**
+
+* syntax:
+
+```
+switch expression {
+   case value_1:
+   //execute when expression equals to value_1
+   case value_1:
+   //execute when expression equals to value_2
+   case value_1:
+   //execute when expression equals to value_3
+   default:
+   //execute when no match found
+}
+```
+* Note: Go uses implicit break statement for switch-case unlike other languages(like c,java).
+
+**Loops in Go**
+* syntax-1:
+
+```
+for i := 1; i <= 5; i++ {
+   fmt.Println(i)
+}
+```
+* syntax-2:
+
+```
+i := 1
+for i <= 5 { //loop only with condition
+   fmt.Println(i)
+   i++
+}
+```
+* syntax-3:
+
+```
+i := 1
+for {
+   fmt.Println(i)  //infinite loop
+}
+
+```
