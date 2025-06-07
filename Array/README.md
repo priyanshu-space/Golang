@@ -65,7 +65,7 @@
 * Sub slice can also created from an underlying slice.
 * We can also declare a slice using **make** function.
 
-    * syntax: `slice := make([]\<data_type>, length, capacity)`
+    * syntax: `slice := make([]\<data_type>, length, capacity(optional))`
     * example: `slice := make([]int, 5, 10)`
 
 * **cap()**: To calculate the capacity of an Slice or Array.
@@ -98,6 +98,10 @@
 * `slice = append(slice, anotherSlice...)`
 
     * Note: These **...** are used for variadic function that can take arbitary no. of arguments as well.
-    * 
+    * anotherSlice would be appended to the first slice.
+
+**Copying from a slice**
+
+* `num := copy(dest_slice, src_slice)`
 
 
