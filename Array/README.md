@@ -104,4 +104,37 @@
 
 * `num := copy(dest_slice, src_slice)`
 
+**Maps**
+
+* Unordered collection of key-value pairs.
+* implemented by hash tables.
+* provide efficient add, get and delete operation.
+
+**Declaring and initializing a map**
+
+* Syntax: `var <map-name> map[<key_data_type>]<value_data_type>`
+    * example: `var my_map map[String]int` --> nil map
+    * Note: we can't add a key-value pair in a nil map. To create a map with key-value pairs map initialization is needed.
+    * `<map_name> := map[<keyDT>]<valueDT>{key-value-pairs}`
+    * example: `codes := map[string]string{"en": "English", "fr": "French}`
+
+**Getting a key in map**
+
+* Getting a key in map returns two values.
+* `value, found := map_name[key]`
+
+    * **found** return boolean value and it is optional (refer mapInitialization.go)
+
+**Delete a key-value pair in map**
+
+* Syntax: `delete(map_name, "key")`
+
+**truncate a map** : Truncating map means deleting its key-value pair map.
+
+* iterate over map and delete one by one.
+* reinitialize the map with an empty map using **make** function.
+   
+    * `map_name := make(map[keyDT]valueDT)` (refer iterateMap.go)
+
+
 
