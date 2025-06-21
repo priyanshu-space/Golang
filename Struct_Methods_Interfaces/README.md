@@ -48,3 +48,79 @@
     
     * example: `func (c Circle) area() float64 { }`, `func (c *Circle) area() float64 { }`
     * Note : Any instance of Circle c has `area` method available.
+
+**Interface**
+
+
+------------
+
+**Combined Analogy**
+
+A. Struct — Model Data
+
+```
+type User struct {
+    name  string
+    email string
+}
+
+```
+
+* Problem: You can store data, but not define any behavior
+
+B. Method — Add Behavior to Struct
+
+```
+func (u User) Greet() {
+    fmt.Println("Hello,", u.name)
+}
+```
+* Problem: Now you can give `User` behavior but still can't write flexible code that works with any `struct` type.
+
+C. Interface — Define a Contract
+
+```
+type Greeter interface {
+    Greet()
+}
+
+//Now any type that implements Greet() becomes a Greeter.
+
+func sayHello(g Greeter) {
+    g.Greet()
+}
+```
+**Unified Example**
+
+```
+package main
+
+import "fmt"
+
+// Struct
+type User struct {
+    name  string
+    email string
+}
+
+// Method
+func (u User) Greet() {
+    fmt.Println("Hello,", u.name)
+}
+
+// Interface
+type Greeter interface {
+    Greet()
+}
+
+// Function using interface
+func sendGreeting(g Greeter) {
+    g.Greet()
+}
+
+func main() {
+    u := User{name: "Priyanshu", email: "you@example.com"}
+    sendGreeting(u) // uses interface to call Greet
+}
+
+```
