@@ -11,9 +11,21 @@ In Go, packages come bundled together as a library called "Standard Library"
     * Use byte when dealing with low-level binary data or single-byte ASCII characters.
     * Use rune when working with individual characters in a string, especially when handling text that includes non-ASCII or multi-byte Unicode characters.
 
+* Some string methods:
 
-* Contains
-* ReplaceAll
-* Count
+    * Contains
+    * ReplaceAll
+    * Count
+
+go doc <package_name> <function_name>
+eg; `go doc fmt Println`
+
+**File Handling**
+
+Packages : ??
+
+* For metadata from a specific file : `stat` method from OS package
+
+
 
 
