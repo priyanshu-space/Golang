@@ -1,0 +1,14 @@
+Project-Name: cryptit
+-------------------
+
+Packages involved:
+ 1. encrypt --> algo.go
+ 2. decrypt --> algo.go
+
+algorithm.go --> add 3 in the ascii
+    a --> d
+    m --> p
+
+
+main.go --> access the encryption and decryption packages.
+
