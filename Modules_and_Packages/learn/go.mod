@@ -8,5 +8,3 @@ require (
 )
 
 require github.com/google/uuid v1.0.0 // indirect
-
-replace github.com/priyanshu-space/golang/Modules_and_Packages/cryptit => ../cryptit

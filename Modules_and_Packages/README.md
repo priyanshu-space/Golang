@@ -32,3 +32,20 @@
 * Check repo status.
 * Tag commit after git add and git commit (`git tag v0.1.0`): It tags the commit with the version number.
 * Push the tag to the github (`git push origin v0.1.0`)
+
+**godoc**
+
+* `go doc PACKAGE_NAME`: It parses the source file and extracts the comments to produce HTML or plain text documentation.
+* `go doc PACKAGE_NAME.IDENTIFIER_NAME`
+* Note: Place a regular comment just before package declaration without any blank lines in go source file.
+
+**Package name collision**
+
+When two or more packages share the same name and are imported in a go source code, To use thema and avoid its package name collision, we can use `alias`
+
+```
+import (
+    crand "crypto/rand"
+    "math/rand"
+)
+```
