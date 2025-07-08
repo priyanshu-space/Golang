@@ -28,3 +28,7 @@
 
 **Developing and publishing modules**
 
+* Inititilize git repo.
+* Check repo status.
+* Tag commit after git add and git commit (`git tag v0.1.0`): It tags the commit with the version number.
+* Push the tag to the github (`git push origin v0.1.0`)
